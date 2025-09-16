@@ -1,0 +1,118 @@
+/* Reset بسيط */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+   /* direction: rtl;  
+  text-align: right;  */
+}
+
+/* Header */
+header {
+  background: #338542;
+  color: white;
+  padding: 15px 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header ul li a:hover {
+  color: #00ff15;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #444;
+  
+}
+
+#about img {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Skills */
+#skills ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Projects */
+.project {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea, form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background: #2a8b45;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #a9e8b1;
+}
+
+/* Footer */
+footer {
+  background: #3aae36;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
