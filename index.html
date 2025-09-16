@@ -3,70 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>profile website</title>
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <nav>
-        <h1>Eng. Nour Alkassar</h1>
-        <ul>
-          <li><a href="#about">من أنا</a></li>
-          <li><a href="#skills">مهاراتي</a></li>
-          <li><a href="#projects">مشاريعي</a></li>
-          <li><a href="#contact">تواصل</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="overlay"></div>
 
-    <!-- About -->
-    <section id="about">
-      <h2>من أنا</h2>
-      <img src="media/image2.png" alt="صورتي الشخصية" />
-      <p>
-        أنا مطور ويب مبتدئ أحب تعلم HTML و CSS و Git، وأسعى لبناء مواقع جميلة
-        وتفاعلية.
-      </p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>مهاراتي</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>مشاريعي</h2>
-      <div class="project">
-        <h3>مشروع 1</h3>
-        <p>وصف قصير عن المشروع.</p>
+    <div class="dashboard">
+      <!-- الشريط الجانبي -->
+      <div class="sidebar">
+        <hr />
+        <div class="nav-item"><i class="fas fa-home"></i>الرئيسية</div>
+        <div class="nav-item"><i class="fas fa-user"></i>الملف الشخصي</div>
+        <div class="nav-item"><i class="fas fa-mosque"></i>إدارة المساجد</div>
+        <div class="nav-item"><i class="fas fa-users"></i>إدارة المشرفين</div>
+        <div class="nav-item"><i class="fas fa-archive"></i>ارشفة مدير</div>
+        <div class="nav-item"><i class="fas fa-archive"></i>ارشفة مسجد</div>
+        <div class="nav-item"><i class="fas fa-clock"></i>ادارة الدوام</div>
+        <div class="nav-item"><i class="fas fa-cog"></i>الإعدادات</div>
+        <div class="logout nav-item">
+          <i class="fas fa-sign-out-alt"></i>تسجيل الخروج
+        </div>
       </div>
-      <div class="project">
-        <h3>مشروع 2</h3>
-        <p>وصف قصير عن المشروع.</p>
+
+      <!-- المحتوى الرئيسي -->
+      <div class="main-content">
+        <!-- حقل البحث -->
+        <div class="search-bar">
+          <select>
+            <option value="name">🔤 الاسم</option>
+            <option value="category">🏷️ الفئة</option>
+          </select>
+          <input type="text" placeholder="ابحث باسم المسجد أو المدينة..." />
+        </div>
+
+        <!-- بطاقات الإحصائيات -->
+        <div class="stats">
+          <div class="stat-card">
+            <h3>عدد المساجد</h3>
+            <p>50</p>
+          </div>
+          <div class="stat-card">
+            <h3>عدد المشرفين الفعالين</h3>
+            <p>12</p>
+          </div>
+          <div class="stat-card">
+            <h3>عدد الطلبات</h3>
+            <p>30</p>
+          </div>
+          <div class="stat-card">
+            <h3>عدد الشكاوى النشطة</h3>
+            <p>5</p>
+          </div>
+        </div>
+
+        <!-- أزرار الروابط السريعة -->
+        <div class="quick-links">
+          <button>إضافة مسجد</button>
+          <button>إضافة مشرف</button>
+          <button>إضافة مستخدم</button>
+          <button>إصدار قرار جديد</button>
+          <button>عرض تقارير الصيانة</button>
+          <button>إدارة الطلبات</button>
+          <button>إدارة الشكاوى</button>
+          <button>إدارة الدوام</button>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>تواصل معي</h2>
-      <form>
-        <input type="text" placeholder="الاسم" required />
-        <input type="email" placeholder="الإيميل" required />
-        <textarea placeholder="رسالتك" required></textarea>
-        <button type="submit">إرسال</button>
-      </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 - بورتفوليو شخصي</p>
-    </footer>
+    <!-- أيقونات من FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
