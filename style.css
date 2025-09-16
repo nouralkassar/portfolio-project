@@ -16,7 +16,7 @@
 }
 
 body {
-  background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+  background: url('media/image2.png') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
