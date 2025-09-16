@@ -8,7 +8,19 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.6.0/hint.min.css"
+      />
+    </head>
     <link rel="stylesheet" href="style.css" />
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.min.css"
+      />
+    </head>
   </head>
   <body>
     <div class="overlay"></div>
@@ -70,8 +82,18 @@
           <button>عرض تقارير الصيانة</button>
           <button>إدارة الطلبات</button>
           <button>إدارة الشكاوى</button>
-          <button>إدارة الدوام</button>
+          <button class="hint--top" data-hint="اضغط هنا لتأكيد الطلب">
+            إدارة الدوام
+          </button>
+          <button class="hint--top" data-hint="اضغط هنا لتأكيد الطلب">
+            زر التأكيد
+          </button>
         </div>
+      </div>
+      <div class="loader-inner ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
 
