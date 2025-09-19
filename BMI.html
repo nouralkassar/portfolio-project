@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>حساب مؤشر كتلة الجسم (BMI)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>حساب مؤشر كتلة الجسم (BMI)</h1>
+      <div class="input-group">
+        <label for="weight">الوزن (كجم):</label>
+        <input type="number" id="weight" step="0.1" placeholder="أدخل وزنك" />
+      </div>
+      <div class="input-group">
+        <label for="height">الطول (سم):</label>
+        <input type="number" id="height" step="0.1" placeholder="أدخل طولك" />
+      </div>
+      <button id="calculate-btn">احسب</button>
+      <div class="result-box" id="result"></div>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("calculate-btn")
+      .addEventListener("click", function () {
+        const weight = parseFloat(document.getElementById("weight").value);
+        const heightCm = parseFloat(document.getElementById("height").value);
+        const resultElement = document.getElementById("result");
+
+        // التحقق من صحة المدخلات
+        if (isNaN(weight) || isNaN(heightCm) || weight <= 0 || heightCm <= 0) {
+          resultElement.textContent = "الرجاء إدخال قيم صحيحة للوزن والطول.";
+          resultElement.style.color = "#dc3545";
+          return;
+        }
+
+        // تحويل الطول من سم إلى متر
+        const heightM = heightCm / 100;
+
+        // حساب مؤشر كتلة الجسم (BMI)
+        const bmi = (weight / (heightM * heightM)).toFixed(2);
+
+        // عرض النتيجة
+        let message = "";
+        let color = "";
+
+        if (bmi < 18.5) {
+          message = `مؤشر كتلة الجسم هو ${bmi}. أنت في فئة **نقص الوزن**. 😢`;
+          color = "#ffc107";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+          message = `مؤشر كتلة الجسم هو ${bmi}. أنت في فئة **الوزن الطبيعي**. 😊`;
+          color = "#28a745";
+        } else if (bmi >= 25 && bmi < 29.9) {
+          message = `مؤشر كتلة الجسم هو ${bmi}. أنت في فئة **الوزن الزائد**. 😟`;
+          color = "#fd7e14";
+        } else if (bmi >= 30 && bmi <= 34.9) {
+          message = `مؤشر كتلة الجسم هو ${bmi}.   أنت في فئة **السمنة درجة اولى*. 😩`;
+          color = "#dc3545";
+        } else if (bmi >= 35 && bmi <= 39.9) {
+          message = `مؤشر كتلة الجسم هو ${bmi}.   أنت في فئة **السمنة درجة ثانية*. 😩`;
+          color = "#dc3545";
+        } else {
+          message = `مؤشر كتلة الجسم هو ${bmi}.  سمنة خطيرة. 😩`;
+          color = "#dc3545";
+        }
+
+        resultElement.innerHTML = message;
+        resultElement.style.color = color;
+      });
+  </script>
+</html>

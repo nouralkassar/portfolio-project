@@ -14,7 +14,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.6.0/hint.min.css"
       />
     </head>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <head>
       <link
         rel="stylesheet"
@@ -23,10 +23,51 @@
     </head>
   </head>
   <body>
-    <div class="overlay"></div>
+    <form action="#">
+      <input type="text" />
+    </form>
+    <button>click</button>
+    <!-- <h2 id="uppercaseTitle"></h2>
+    <h2 id="replacedTitle"></h2>
+    <h2 id="reversedTitle"></h2> -->
+    <!-- <div id="results"></div> -->
+    <script>
+      // var number1 = 10;
+      // var number2 = 4;
+      // var output = "";
+      // output += "The First Number: " + number1 + "<br>";
+      // output += "The Second Number: " + number2 + "<br><br>";
+      // output += "Sum is: " + (number1 + number2) + "<br>";
+      // output += "Sub is: " + (number1 - number2) + "<br>";
+      // output += "Mult is: " + number1 * number2 + "<br>";
+      // output += "Div is: " + number1 / number2 + "<br>";
+      // output += "Mod is: " + (number1 % number2) + "<br>";
+      // document.getElementById("results").innerHTML = output;
+      // console.log(typeof output);
+      // //////////////////////////////////////////////////////
+      // السلسلة النصية الأصلية
+      var title = "Hello World";
+
+      // متغيرات العناصر المراد استهدافها
+      // var original = document.getElementById("originalTitle");
+      // var upperCase = document.getElementById("uppercaseTitle");
+      // var replaced = document.getElementById("replacedTitle");
+      // var reversed = document.getElementById("reversedTitle");
+
+      // عرض كل نتيجة في عنصر منفصل
+      // original.innerHTML = title;
+      // upperCase.innerHTML = title.toUpperCase();
+      // replaced.innerHTML = title.replaceAll("o", "y");
+
+      // // قلب السلسلة النصية بعد تحويلها إلى حروف كبيرة
+      // var Up = title.toUpperCase();
+      // Up = Up.split("").reverse().join("");
+      // reversed.innerHTML = Up;
+    </script>
+
+    <!-- <div class="overlay"></div>
 
     <div class="dashboard">
-      <!-- الشريط الجانبي -->
       <div class="sidebar">
         <hr />
         <div class="nav-item"><i class="fas fa-home"></i>الرئيسية</div>
@@ -42,9 +83,7 @@
         </div>
       </div>
 
-      <!-- المحتوى الرئيسي -->
       <div class="main-content">
-        <!-- حقل البحث -->
         <div class="search-bar">
           <select>
             <option value="name">🔤 الاسم</option>
@@ -53,7 +92,6 @@
           <input type="text" placeholder="ابحث باسم المسجد أو المدينة..." />
         </div>
 
-        <!-- بطاقات الإحصائيات -->
         <div class="stats">
           <div class="stat-card">
             <h3>عدد المساجد</h3>
@@ -73,7 +111,6 @@
           </div>
         </div>
 
-        <!-- أزرار الروابط السريعة -->
         <div class="quick-links">
           <button>إضافة مسجد</button>
           <button>إضافة مشرف</button>
@@ -97,10 +134,21 @@
       </div>
     </div>
 
-    <!-- أيقونات من FontAwesome -->
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
   </body>
+  <!-- <script>
+    var number1 = 10;
+    var number2 = 4;
+    var sum, sub, div, mod, mult;
+    document.write("The First Number: " + number1 + "<br>");
+    document.write("The Second Number: " + number2 + "<br><br>");
+    document.write("Sum is: " + (number1 + number2) + "<br>");
+    document.write("Sub is: " + (number1 - number2) + "<br>");
+    document.write("Mult is: " + number1 * number2 + "<br>");
+    document.write("Div is: " + number1 / number2 + "<br>");
+    document.write("Mod is: " + (number1 % number2) + "<br>");
+  </script> -->
 </html>

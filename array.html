@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>عرض الطلاب</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="student" /> <button id="add-btn">submit</button>
+      <button id="delet_btn">delet</button>
+      <div>
+        <h2 id="result"></h2>
+      </div>
+    </div>
+  </body>
+  <script>
+    var students = [];
+    document.getElementById("add-btn").addEventListener("click", function () {
+      var studentName = document.getElementById("student").value;
+      students.push(studentName);
+      document.getElementById("result").innerHTML = students;
+      document.getElementById("student").value = "";
+    });
+    document.getElementById("delet_btn").addEventListener("click", function () {
+      students.pop();
+      document.getElementById("result").innerHTML = students;
+    });
+  </script>
+</html>

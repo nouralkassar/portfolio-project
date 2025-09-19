@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #Div {
+        text-align: center;
+        margin-top: 10px;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Div">
+      <h1>Find Student</h1>
+      <br />
+      <input type="text" id="input_text" />
+      <button id="search_btn">search</button>
+      <br />
+      <h2 id="array"></h2>
+      <h1 id="result"></h1>
+    </div>
+  </body>
+  <script>
+    var arr = ["nour", "mmmmm", "nnnnnn"];
+    for (name = 0; name < arr.length; name++) {
+      document.getElementById("array").innerHTML += arr[name] + "--";
+    }
+
+    document
+      .getElementById("search_btn")
+      .addEventListener("click", function () {
+        var text = document.getElementById("input_text").value.toLowerCase();
+        var found = false;
+
+        for (i of arr) {
+          var lowerstudent = i.toLowerCase();
+          if (text == lowerstudent) {
+            found = true;
+            break; // نوقف أول ما نلاقي العنصر
+          }
+        }
+
+        if (found) {
+          document.getElementById("result").innerText = "✅ الطالب موجود";
+        } else {
+          document.getElementById("result").innerText = "❌ الطالب غير موجود";
+        }
+      });
+  </script>
+</html>

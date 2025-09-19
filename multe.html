@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .body{
+            text-align: center;
+        } */
+      #Div {
+        text-align: center;
+        margin-top: 10px;
+        padding-top: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Div">
+      <input type="text" id="input_text" />
+      <button id="click_btn">submit</button>
+      <h2 id="result"></h2>
+    </div>
+  </body>
+  <script>
+    document.getElementById("click_btn").addEventListener("click", function () {
+      var Input_Text = document.getElementById("input_text").value;
+      for (var char of Input_Text) {
+        if (
+          char == "a" ||
+          char == "u" ||
+          char == "e" ||
+          char == "o" ||
+          char == "i"
+        ) {
+        } else {
+          document.getElementById("result").innerHTML += `${char} <br>`;
+        }
+      }
+    });
+  </script>
+</html>
